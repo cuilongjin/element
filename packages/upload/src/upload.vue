@@ -19,7 +19,8 @@ Vue.use(Upload)
 export default {
   name: 'ComUpload',
   methods: {
-    btnClick() {
+    open(options = {}) {
+      // TODO: options
       this.$nextTick(() => {
         const fileInput = document.querySelector('.upload-file .el-upload__input')
         fileInput.click()

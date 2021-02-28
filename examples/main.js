@@ -1,14 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import ELEMENT from 'element-ui'
 import euiElement from '../src/index'
+import routes from './route'
 
+Vue.use(VueRouter)
 Vue.use(euiElement)
-
-import vue from 'vue'
-import { scrollbar } from 'element-ui'
-vue.use(scrollbar)
-
+Vue.use(ELEMENT)
 
 Vue.config.productionTip = false
 
@@ -16,15 +15,9 @@ Vue.config.productionTip = false
 import DemoBlock from './components/demoBlock'
 Vue.component('demo-block', DemoBlock)
 
-// 引入项目样式入口
 import './assets/scss/index.scss'
-
-/* 引入代码高亮样式 */
 import 'highlight.js/styles/color-brewer.css'
 
-// 引入路由
-import routes from './route'
-Vue.use(VueRouter)
 const router = new VueRouter({
   // mode: 'history',
   routes,
