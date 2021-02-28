@@ -1,4 +1,4 @@
 {
-  "eui-modal": "./packages/eui-modal",
+  "upload": "./packages/upload/index.js",
   "index": "./src/index.js"
 }
